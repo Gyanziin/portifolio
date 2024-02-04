@@ -1,0 +1,14 @@
+<div class="btn-contato">
+  <a href="#">
+    <button
+    (click)="submit()"
+    [disabled]="disabled"
+  >
+  @if(!loading) {
+    {{ btnText }}
+  } @else {
+    Carregando...
+  }
+</button>
+  </a>
+</div>

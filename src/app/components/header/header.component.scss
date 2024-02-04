@@ -1,0 +1,39 @@
+@import "../../../colors-variates.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 0 30px;
+}
+
+a {
+  color: $cinza;
+  display: inline-block;
+  transition: 0.2s;
+
+  &:hover {
+    color: $branco;
+    transform: scale(1.05);
+
+  }
+}
+
+@media (max-width: 1020px) {
+  nav, app-button {
+    display: none;
+  }
+
+  img {
+    width: 140px;
+    height: 90px;
+  }
+}

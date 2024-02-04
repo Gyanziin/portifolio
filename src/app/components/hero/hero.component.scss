@@ -1,0 +1,63 @@
+@import "../../../colors-variates.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+h1 {
+  font-size: 42px;
+  line-height: 40px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+img {
+  border-radius: 10px;
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 30px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  img {
+    width: 350px;
+    height: 270px;
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    font-size: 30px;
+
+    br {
+      display: none;
+    }
+  }
+
+  app-button {
+    text-align: center;
+  }
+}

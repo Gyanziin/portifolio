@@ -1,0 +1,22 @@
+@import "../../../colors-variates.scss";
+
+.btn-contato button{
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: $azul-Marinho;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+a {
+  display: inline-block;
+  transition: 0.2s;
+
+  &:hover {
+    color: $branco;
+    transform: scale(1.05);
+
+  }
+}

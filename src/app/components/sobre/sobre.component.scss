@@ -1,0 +1,91 @@
+@import "../../../colors-variates.scss";
+
+.container {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+img {
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 30px;
+}
+
+p {
+  line-height: 20px;
+}
+
+button {
+  background-color: $preto;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: .5s;
+
+  :hover {
+    transform: scale(1.05);
+  }
+}
+
+img {
+  padding: 5px;
+  margin: 5px;
+}
+
+@media (max-width: 1020px) {
+
+  .container {
+    flex-direction: column;
+    margin-top: 0px;
+  }
+
+  img {
+    width: 380px;
+    height: 450px;
+  }
+
+  .texto {
+    gap: 5px;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .btn-social {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    img {
+      width: 80px;
+      height: 80px;
+      padding: 5px;
+      margin: 5px;
+    }
+  }
+}
