@@ -1,4 +1,4 @@
-import { NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage, CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 
@@ -7,11 +7,16 @@ import { ButtonComponent } from '../button/button.component';
   standalone: true,
   imports: [
     NgOptimizedImage,
-    ButtonComponent
+    ButtonComponent,
+    CommonModule
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  btnMenu: boolean = false
 
+  btnMobile() {
+    this.btnMenu = !this.btnMenu
+  }
 }

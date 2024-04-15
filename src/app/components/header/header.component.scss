@@ -4,18 +4,27 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 80px;
+  margin-top: 20px;
 }
 
 .logo {
   cursor: pointer;
 }
 
-nav ul li {
+.menu-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.menu-desktop ul li {
   display: inline-block;
   padding: 0 30px;
 }
 
-a {
+.menu-desktop a {
   color: $cinza;
   display: inline-block;
   transition: 0.2s;
@@ -28,12 +37,55 @@ a {
 }
 
 @media (max-width: 1020px) {
-  nav, app-button {
+  app-button {
     display: none;
   }
 
+  .menu-desktop {
+
+
+    &.ativo {
+      display: flex;
+      visibility: visible;
+    }
+  }
+
+
+  nav span {
+    border-top: 2px solid;
+    width: 25px;
+    color: $azul-Marinho;
+    display: block;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      width: 25px;
+      height: 2px;
+      background-color: currentColor;
+      transition: .3s;
+      margin-top: 5px;
+      position: relative;
+    }
+  }
+
+  nav span.ativo {
+    border-top: transparent;
+
+    &::before {
+      transform: rotate(135deg);
+    }
+
+    &::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+  }
+
   img {
-    width: 140px;
-    height: 90px;
+    width: 120px;
+    height: 70px;
   }
 }

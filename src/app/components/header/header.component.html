@@ -1,29 +1,28 @@
 <header>
-    <div class="container">
-      <div class="logo">
-        <a href="#">
-          <img ngSrc="./assets/logo.png" priority width="200" height="100">
-        </a>
-      </div>
-
-      <nav>
-        <ul>
-          <li>
-            <a href="#">Inicio</a>
-          </li>
-          <li>
-            <a href="#">Especialidades</a>
-          </li>
-          <li>
-            <a href="#">Sobre</a>
-          </li>
-          <li>
-            <a href="#">Projetos</a>
-          </li>
-        </ul>
-      </nav>
-
-      <app-button btn-text="Contato"></app-button>
-
+  <div class="container">
+    <div class="logo">
+      <a href="#">
+        <img ngSrc="./assets/logo.png" priority width="150" height="70">
+      </a>
     </div>
+
+    <nav>
+      <span (click)="btnMobile()" [ngClass]="btnMenu ? 'ativo' : ''"></span>
+      <ul class="menu-desktop" [ngClass]="btnMenu ? 'ativo' : ''">
+        <li>
+          <a href="#">Inicio</a>
+        </li>
+        <li>
+          <a href="#">Especialidades</a>
+        </li>
+        <li>
+          <a href="#">Sobre</a>
+        </li>
+        <li>
+          <a href="#">Projetos</a>
+        </li>
+      </ul>
+    </nav>
+    <app-button btn-text="Contato"></app-button>
+  </div>
 </header>
