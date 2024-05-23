@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   gap: 40px;
-  padding: 100px 4%;
+  padding: 170px 4% 0 4%;
 }
 
 
@@ -43,6 +43,7 @@ img {
 @media (max-width: 1080px) {
   .container {
     flex-direction: column-reverse;
+    padding: 100px 4% 0 4%;
   }
 
   img {
