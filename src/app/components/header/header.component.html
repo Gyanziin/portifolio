@@ -6,9 +6,8 @@
       </a>
     </div>
 
-    <nav>
-      <span (click)="btnMobile()" [ngClass]="btnMenu ? 'ativo' : ''"></span>
-      <ul class="menu-desktop" [ngClass]="btnMenu ? 'ativo' : ''">
+    <nav >
+      <ul class="menu-desktop">
         <li>
           <a href="#">Inicio</a>
         </li>
@@ -23,6 +22,39 @@
         </li>
       </ul>
     </nav>
-    <app-button btn-text="Contato"></app-button>
+    <app-button btn-text="Contato" (click)="redirecionarParaWhatsApp()"></app-button>
+
+    <div class="btn-abrir-menu" (click)="btnAbrir()">
+      <i class="bi bi-list"></i>
+    </div>
+
+    <div class="menu-mobile" (click)="btnAbrir()" [ngClass]="btnMenu ? 'ativo' : ''">
+      <div class="btn-fechar" (click)="btnAbrir()">
+        <i  (click)="btnAbrir()" class="bi bi-x-lg"></i>
+      </div>
+      <nav >
+        <ul (click)="btnAbrir()">
+          <li (click)="btnAbrir()" href="#inicio">
+            <a (click)="btnAbrir()" href="#inicio">Inicio</a>
+          </li>
+          <li href="#especialidades">
+            <a (click)="btnAbrir()" href="#especialidades">Especialidades</a>
+          </li>
+          <li  href="#sobre">
+            <a (click)="btnAbrir()" href="#sobre">Sobre</a>
+          </li>
+          <li  href="#projetos">
+            <a (click)="btnAbrir()" href="#projetos">Projetos</a>
+          </li>
+          <li href="#contato" (click)="redirecionarParaWhatsApp()">
+            <a (click)="btnAbrir()" (click)="redirecionarParaWhatsApp()" href="#contato">Contato</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="overlay-menu" [ngClass]="btnMenu ? 'ativo' : ''">
+
+    </div>
   </div>
 </header>

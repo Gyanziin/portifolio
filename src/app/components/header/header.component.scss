@@ -4,8 +4,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
   margin-top: 20px;
+}
+
+header {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .logo {
@@ -36,56 +44,105 @@
   }
 }
 
+.menu-mobile {
+  background-color: $preto;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999999;
+  width: 0%;
+  overflow: hidden;
+  transition: .5s;
+
+  &.ativo {
+    width: 60%;
+  }
+
+  nav {
+    ul {
+      text-align: right;
+
+      li {
+        padding: 20px 8%;
+        display: block;
+        cursor: pointer;
+
+          &:hover {
+            background-color: $azul-Marinho;
+            a {
+              color: $preto;
+              background-color: $azul-Marinho;
+            }
+          }
+
+        a {
+          color: $branco;
+          font-size: 20px;
+          font-weight: 300;
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.btn-abrir-menu {
+  
+  i {
+    color: $azul-Marinho;
+    font-size: 40px;
+    cursor: pointer;
+  }
+
+  &.ativo {
+    display: none;
+  }
+}
+
+.btn-fechar {
+  cursor: pointer;
+  padding: 20px 5%;
+  i {
+    color: $azul-Marinho;
+    font-size: 30px;
+  }
+}
+
+.overlay-menu {
+  background-color: #00000059;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 88888;
+  display: none;
+
+  &.ativo {
+    display: block;
+  }
+}
+
 @media (max-width: 1020px) {
+
+  .container {
+    margin-top: 0;
+    padding: 20px 4%;
+  }
+
   app-button {
     display: none;
   }
 
   .menu-desktop {
-
-
-    &.ativo {
-      display: flex;
-      visibility: visible;
-    }
-  }
-
-
-  nav span {
-    border-top: 2px solid;
-    width: 25px;
-    color: $azul-Marinho;
-    display: block;
-    cursor: pointer;
-
-    &::before,
-    &::after {
-      content: '';
-      display: block;
-      width: 25px;
-      height: 2px;
-      background-color: currentColor;
-      transition: .3s;
-      margin-top: 5px;
-      position: relative;
-    }
-  }
-
-  nav span.ativo {
-    border-top: transparent;
-
-    &::before {
-      transform: rotate(135deg);
-    }
-
-    &::after {
-      transform: rotate(-135deg);
-      top: -7px;
-    }
+    display: none;
   }
 
   img {
-    width: 120px;
-    height: 70px;
+    width: 90px;
+    height: 50px;
   }
 }

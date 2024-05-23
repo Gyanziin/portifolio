@@ -16,7 +16,11 @@ import { ButtonComponent } from '../button/button.component';
 export class HeaderComponent {
   btnMenu: boolean = false
 
-  btnMobile() {
+  btnAbrir() {
     this.btnMenu = !this.btnMenu
+  }
+
+  redirecionarParaWhatsApp() {
+    window.location.href = 'https://wa.me/5527998146338?text=Olá,%20gostaria%20de%20entrar%20em%20contato%20com%20você.';
   }
 }

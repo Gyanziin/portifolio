@@ -1,14 +1,18 @@
 <section>
   <div class="container">
     <h2>FALA <span>COMIGO.</span></h2>
-    <form>
-      <input type="text" required placeholder="Seu nome: ">
-      <input type="text" required placeholder="Seu e-mail">
-      <input type="text" placeholder="Seu celular">
-      <textarea required placeholder="Sua mensagem"></textarea>
+    <form id="contact-form" action="https://api.staticforms.xyz/submit" method="POST" onsubmit="enviarEmail()">
+      <input type="hidden" name="accessKey" value="ccf9bf80-ccd1-4229-a4a7-3fdb76d1169c">
+      <input type="text" name="honeypot" style="display: none;">
+      <input type="hidden" name="redirectTo" value="https://gyan-hugo.vercel.app">
+      <input name="name" type="text" required placeholder="Seu nome: ">
+      <input name="email" type="text" required placeholder="Seu e-mail">
+      <input name="phone" type="text" placeholder="Seu celular">
+      <textarea name="message" required placeholder="Sua mensagem"></textarea>
       <div class="btn-enviar">
-        <input type="submit" value="Enviar">
+        <input id="submit-btn" type="submit" value="Enviar">
       </div>
     </form>
+    <div id="success-message" style="display: none;">O e-mail foi enviado com sucesso!</div>
   </div>
 </section>
