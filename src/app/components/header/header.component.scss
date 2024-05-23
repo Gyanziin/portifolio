@@ -89,8 +89,9 @@ header {
   }
 }
 
+
 .btn-abrir-menu {
-  
+  display: none;
   i {
     color: $azul-Marinho;
     font-size: 40px;
@@ -101,6 +102,7 @@ header {
     display: none;
   }
 }
+
 
 .btn-fechar {
   cursor: pointer;
@@ -127,6 +129,10 @@ header {
 }
 
 @media (max-width: 1020px) {
+
+  .btn-abrir-menu {
+    display: block;
+  }
 
   .container {
     margin-top: 0;
